@@ -22,6 +22,9 @@ public class CountingCharacters {
         char[] charactersInPhrase = phrase.replaceAll("[^a-zA-Z]", "").toLowerCase().toCharArray();
 
 
+        //loops through array of characters, checks if character is in HashMap
+        //if it is not, adds it as a key and sets value to 1
+        //if it is, it gets the key and increases the count of the value by 1
         for (char character : charactersInPhrase) {
             if (!countedCharacters.containsKey(character)) {
                 countedCharacters.put(character, 1);
